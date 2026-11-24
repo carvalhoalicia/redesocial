@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conecta — sua rede social</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="authView" class="auth-shell">
+  <section class="auth-card">
+    <div class="brand"><span class="brand-mark">✦</span> conecta</div>
+    <p class="eyebrow">SUA COMUNIDADE, DO SEU JEITO</p>
+    <h1 id="authTitle">Que bom ter você de volta.</h1>
+    <p class="muted" id="authSubtitle">Entre para acompanhar o que está acontecendo.</p>
+    <form id="loginForm" class="auth-form">
+      <label>E-mail<input type="email" id="loginEmail" placeholder="voce@email.com" required></label>
+      <label>Senha<input type="password" id="loginPassword" placeholder="Sua senha" required></label>
+      <button class="primary full" type="submit">Entrar</button>
+    </form>
+    <form id="registerForm" class="auth-form hidden">
+      <label>Nome completo<input id="regName" placeholder="Como podemos te chamar?" required></label>
+      <label>Nome de usuário<input id="regUsername" placeholder="@seuusuario" required></label>
+      <label>E-mail<input type="email" id="regEmail" placeholder="voce@email.com" required></label>
+      <label>Senha<input type="password" id="regPassword" minlength="6" placeholder="Mínimo de 6 caracteres" required></label>
+      <button class="primary full" type="submit">Criar minha conta</button>
+    </form>
+    <p class="switch-auth"><span id="switchText">Ainda não tem uma conta?</span> <button id="switchAuth" class="link-button" type="button">Cadastre-se</button></p>
+    <p id="authMessage" class="message" role="status"></p>
+  </section>
+  <aside class="auth-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-copy"><span class="art-pill">✦ UM LUGAR PARA COMPARTILHAR</span><h2>Ideias boas<br>merecem <em>conexões.</em></h2><p>Compartilhe momentos, descubra novidades e fique perto de quem importa.</p><div class="art-bubbles"><span>✿</span><span>♡</span><span>✦</span><span>☻</span></div></div></aside>
+</div>
+
+<div id="appView" class="app hidden">
+  <header class="topbar"><a class="brand" href="#"><span class="brand-mark">✦</span> conecta</a><div class="top-search">⌕ <span>Um feed cheio de possibilidades</span></div><div class="top-user"><div class="avatar small" id="topAvatar">U</div><span id="topUsername"></span><button id="logoutBtn" class="logout">Sair ↗</button></div></header>
+  <main class="layout">
+    <aside class="left-sidebar"><div class="profile-mini"><div class="avatar large" id="sideAvatar">U</div><strong id="sideName">Usuário</strong><span id="sideHandle">@usuario</span></div><nav><a class="nav-item active" href="#feed">⌂ <span>Feed</span></a><a class="nav-item" href="#composer">＋ <span>Criar publicação</span></a></nav><div class="sidebar-note"><span>✦</span><strong>Espaço para ser você.</strong><p>Compartilhe suas ideias e acompanhe sua comunidade.</p></div></aside>
+    <section class="feed-column">
+      <div class="feed-heading"><div><p class="eyebrow">SEU CANTINHO NA INTERNET</p><h1>Feed</h1></div><span class="online-dot">● Comunidade</span></div>
+      <section class="composer" id="composer"><div class="composer-top"><div class="avatar" id="composerAvatar">U</div><div><strong>Compartilhe algo novo</strong><p>O que está acontecendo?</p></div></div><form id="postForm"><textarea id="postCaption" maxlength="1000" placeholder="Escreva uma legenda..." required></textarea><div class="composer-bottom"><label class="image-url">▧ <input id="postImage" type="url" placeholder="Cole o link de uma imagem (opcional)"></label><button class="primary" type="submit">Publicar <span>↗</span></button></div></form><p id="postMessage" class="message"></p></section>
+      <div class="feed-filter"><strong>Publicações recentes</strong><span>O que há de novo por aqui ✨</span></div>
+      <div id="feedList" class="feed-list"><div class="loading">Carregando publicações...</div></div>
+    </section>
+    <aside class="right-sidebar"><div class="welcome-card"><span class="welcome-icon">✦</span><p class="eyebrow">BEM-VINDO(A) AO CONECTA</p><h3>Pequenas interações, grandes conexões.</h3><p>Curta publicações e compartilhe um pouco do seu mundo.</p></div><div class="tip-card"><strong>💡 Dica da comunidade</strong><p>Uma boa conversa começa com uma curtida ou um comentário gentil.</p></div><p class="copyright">Conecta · Feito para aproximar pessoas.</p></aside>
+  </main>
+</div>
+<script src="app.js"></script>
+</body></html>
